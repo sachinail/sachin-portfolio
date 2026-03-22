@@ -48,7 +48,12 @@ export default function About() {
                 sachincail48@gmail.com
               </a>
             </div>
-            <div style={{ marginTop: '0.4rem' }}>📞&nbsp; +91 99029 16342</div>
+            <div style={{ marginTop: '0.4rem' }}>
+              📞&nbsp;{' '}
+              <a href="tel:+919902916342" style={{ color: 'var(--accent2)', textDecoration: 'none' }}>
+                +91 99029 16342
+              </a>
+            </div>
             <div style={{ marginTop: '0.4rem' }}>
               🔗&nbsp;{' '}
               <a
@@ -66,7 +71,7 @@ export default function About() {
 
           <InfoBox label="Languages spoken">
             <div className="lang-pills">
-              {['English','Hindi', 'Tulu', 'Kannada', 'Malayalam'].map((l) => (
+              {['English', 'Hindi', 'Tulu', 'Kannada', 'Malayalam'].map((l) => (
                 <span key={l} className="lang-pill">{l}</span>
               ))}
             </div>
