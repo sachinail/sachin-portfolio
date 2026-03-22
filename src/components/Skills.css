@@ -1,0 +1,109 @@
+.skills-outer {
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-cell {
+  padding: 1.6rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.25s;
+}
+
+.skill-cell:hover {
+  background: var(--surface2);
+}
+
+.skill-cell:nth-child(3n) {
+  border-right: none;
+}
+
+.skill-cell:nth-child(n + 4) {
+  border-bottom: none;
+}
+
+.skill-cell-name {
+  font-size: 0.65rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.stag {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.stag:hover {
+  border-color: var(--border2);
+  color: var(--text);
+}
+
+.stag-hot {
+  background: rgba(232, 164, 74, 0.12);
+  border-color: rgba(232, 164, 74, 0.3) !important;
+  color: var(--accent) !important;
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skill-cell:nth-child(2n) {
+    border-right: none;
+  }
+
+  .skill-cell:nth-child(3n) {
+    border-right: 1px solid var(--border);
+  }
+
+  .skill-cell:nth-child(1),
+  .skill-cell:nth-child(2),
+  .skill-cell:nth-child(3),
+  .skill-cell:nth-child(4) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .skill-cell:nth-child(5),
+  .skill-cell:nth-child(6) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-cell {
+    border-right: none !important;
+  }
+
+  .skill-cell:not(:last-child) {
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  .skill-cell:last-child {
+    border-bottom: none !important;
+  }
+}

@@ -1,0 +1,154 @@
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.exp-card:last-child {
+  margin-bottom: 0;
+}
+
+.exp-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  padding: 1.75rem 2.2rem;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.exp-company {
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.exp-role-title {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+
+.exp-badges {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.67rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.badge-green {
+  background: rgba(94, 184, 160, 0.12);
+  color: var(--accent2);
+  border: 1px solid rgba(94, 184, 160, 0.2);
+}
+
+.badge-amber {
+  background: rgba(232, 164, 74, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(232, 164, 74, 0.2);
+}
+
+.badge-dim {
+  background: var(--surface2);
+  color: var(--dim);
+  border: 1px solid var(--border);
+}
+
+.exp-period {
+  text-align: right;
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.exp-period strong {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 300;
+  margin-bottom: 0.2rem;
+}
+
+.exp-achievements {
+  padding: 1.75rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.ach {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.ach-icon {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+.ach-text {
+  font-size: 0.87rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.ach-text strong {
+  color: var(--text);
+  font-weight: 400;
+}
+
+.perf-chip {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(94, 184, 160, 0.1);
+  color: var(--accent2);
+  border: 1px solid rgba(94, 184, 160, 0.2);
+  font-size: 0.67rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100px;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  .exp-top {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .exp-period {
+    text-align: left;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .exp-top,
+  .exp-achievements {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
